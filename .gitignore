@@ -26,3 +26,6 @@
 /dist/
 /nbdist/
 /.nb-gradle/
+/src/main/front/node_modules/
+gradlew
+gradlew.bat
