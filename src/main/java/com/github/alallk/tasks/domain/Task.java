@@ -3,6 +3,7 @@ package com.github.alallk.tasks.domain;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -18,7 +19,8 @@ public class Task {
     @GeneratedValue
     private Long id;
     private String name;
-    @JsonFormat(pattern = "MM/dd/yyyy")
+//    @JsonFormat(pattern = DateTimeFormat.ISO)
+    @DateTimeFormat(pattern = "dd/MM/yyyy")
     private LocalDate dueDate;
     private Boolean completed;
 
